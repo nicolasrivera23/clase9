@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 1</title>
+</head>
+<body>
+  
+  <div id="demo"></div>
+
+  <!--
+    1. Le pedimos al usuario que ingrese dos números usando prompt()
+    2. Convertimos los datos a tipos numéricos utilizando parseInt()
+    3. Verificar con isNaN() si los datos ingresados son válidos para evitar errores.
+    4. Mostrar en la consola los resultados de
+    suma, resta, multiplicación, división y módulo.
+
+  -->
+  <script>
+    let nroUno = prompt("Ingrese el primer número");
+    let nroDos = prompt("Ingrese el segundo número");
+
+    console.log("Tipo de dato del Nro Uno - antes: " + typeof nroUno);
+    console.log("No es un número - antes de parsear ? - " + isNaN(nroUno));
+
+    let nro1 = parseInt(nroUno);
+    console.log("Tipo de dato del Nro Uno - después: " + typeof nro1);
+    let nro2 = parseInt(nroDos);
+    console.log("Tipo de dato del Nro Dos - después: " + typeof nro2);
+    //console.log("Es un número - despues de parsear ? - " + isNaN(nro1));
+
+    let suma = nro1 + nro2;
+    console.log("Suma : " + suma);
+
+    let resta = nro1 - nro2;
+    console.log("Resta : " + resta);
+
+    let multiplicacion = nro1 * nro2;
+    console.log("Multiplicacion : " + multiplicacion);
+
+    let division = nro1 / nro2;
+    console.log("División : " + division);
+
+    let modulo = nro1 % nro2;
+    console.log("Módulo : " + modulo);
+
+    document.getElementById("demo").innerHTML =
+    "Nro 1: " + nroUno + "- Nro 2: " + nroDos;
+  </script>
+</body>
+</html>

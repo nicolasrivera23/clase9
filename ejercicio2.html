@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2</title>
+</head>
+<body>
+  
+  <div id="demo"></div>
+
+  <!--
+    1. Pedir nombre y edad con prompt().
+    2. Validar que la edad sea un número válido con isNaN().
+    3. Convertir la edad de texto a número con parseInt() o Number().
+    4. Concatenar los datos para formar un mensaje descriptivo y mostrarlo en consola.
+    5. Comparar la edad para decir si la persona es mayor de edad o no.
+  -->
+  <script>
+    let nombre = prompt("Ingrese su nombre", "Nombre y Apellido");
+    let edad = prompt("Ingrese su edad");
+
+    console.log("No es un número - antes de parsear ? - " + isNaN(edad));
+
+    let edadNumerica = parseInt(edad);
+
+    console.log("Tipo de dato de edad: " + typeof edadNumerica);
+
+    document.getElementById("demo").innerHTML =
+    "Hola " + nombre + " su edad es de " + edadNumerica;
+  </script>
+</body>
+</html>
